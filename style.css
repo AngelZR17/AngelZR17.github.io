@@ -63,24 +63,6 @@ hr {
     font-weight: 500;
 }
 
-.header-detail {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    background-color: var(--color-red-pastel);
-    color: white;
-    text-align: center;
-    padding-block: 1rem;
-    margin-bottom: 1rem;
-}
-  
-.header-detail h2 {
-    margin: 0;
-    font-size: 25px;
-    font-weight: 500;
-}
-
 .pokemon-list {
     display: grid;
     grid-template-columns: 1fr;

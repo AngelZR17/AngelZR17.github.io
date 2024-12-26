@@ -10,14 +10,12 @@ function showPokemonDetails(data) {
     let types = data.types.map(type => `<p class="${type.type.name} type">${type.type.name}</p>`);
     let abilities = data.abilities.map(ability => `<p class="${ability.ability.name} ability">${ability.ability.name}</p>`)
     let stats = data.stats.map(stat => `<p class="other-stat">${stat.stat.name}: ${stat.base_stat}</p>`);
+    let pokemonID = data.id.toString();
 
     types = types.join('');
     abilities = abilities.join('');
     stats = stats.join('');
-    console.log(stats);
-
-    let pokemonID = data.id.toString();
-
+    
     if (pokemonID.length === 1) {
       pokemonID = "00" + pokemonID;
     } else if (pokemonID.length === 2) {
@@ -38,8 +36,8 @@ function showPokemonDetails(data) {
                 ${types}
             </div>
             <div class="pokemon-stats">
-                <p class="stat">${data.height}m</p>
-                <p class="stat">${data.weight}kg</p> 
+                <p class="stat">${(data.height/10).toFixed(1)} m</p>
+                <p class="stat">${(data.weight/10).toFixed(1)} kg</p> 
             </div>
             <hr>
             <div class="other-stats">
